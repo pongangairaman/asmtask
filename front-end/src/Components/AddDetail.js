@@ -15,7 +15,7 @@ function AddDetail() {
     const selectedStudentDetail = useSelector(store => store.studentDetail.selectedStudentDetail)
 
     const addStudentDetailSchema = yup.object().shape({
-        usn: yup.string().max(10).required('USN is a required field'),
+        usn: yup.string().min(10).max(10).required('USN is a required field'),
         firstName: yup.string().max(50).required('Firt name is a required field'),
         address: yup.string().required('Address is a required field'),
         mobileNumber: yup.number().required('Mobile number is a required field').test('len', 'Must be 10 characters', val => val && val.toString().length === 10),

@@ -32,7 +32,7 @@ function Table() {
     }
     const handleDelete = () => {
         console.log('delete action is clicked')
-        dispatch(deleteStudentDetail(parseInt(deleteStudentUsn)))
+        dispatch(deleteStudentDetail(deleteStudentUsn))
         toggleModal()
     }
 
